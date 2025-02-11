@@ -16,7 +16,7 @@ int main(int argc, char *argv[]) {
         perror("Error obtaining file info");
         return 1;
     }
-
+    
     printf("File: %s\n", argv[1]);
     printf("Inode: %llu\n", fileStat.st_ino);
     printf("Size: %lld bytes\n", fileStat.st_size);
