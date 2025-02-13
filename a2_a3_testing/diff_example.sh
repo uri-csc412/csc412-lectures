@@ -8,4 +8,4 @@ if [ "$#" -ne 2 ]; then
 fi
 
 # diff <(program1) <(program2)
-diff <(./$1) <(./$2)
+diff -c <(./$1) <($2)
