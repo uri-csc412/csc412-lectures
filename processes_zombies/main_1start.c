@@ -4,18 +4,7 @@
 #include <stdbool.h>
 #include <string.h>
 
-void save_us_joel() {
-    // Save us Joel from the zombies!
-    struct sigaction sa;
-    memset(&sa, 0, sizeof(sigaction));
-    sa.sa_handler = SIG_DFL;
-    sa.sa_flags = SA_NOCLDWAIT;
-
-    sigaction(SIGCHLD, &sa, NULL);
-}
-
 int main(int argc, char **argv) {
-    save_us_joel();
     while (1) {
         pid_t pid = fork();
         if (pid == 0) {
