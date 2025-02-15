@@ -3,12 +3,14 @@
 #include <unistd.h>
 #include <stdbool.h>
 #include <string.h>
+#include <signal.h>
 
 void save_us_joel() {
-    // Save us Joel from the zombies!
+    // save us Joel from the zombies!
     struct sigaction sa;
-    memset(&sa, 0, sizeof(sigaction));
-    sa.sa_handler = SIG_DFL;
+    memset(&sa, 0, sizeof(sa));
+    // sa.sa_handler = SIG_DFL;
+    sa.sa_handler = SIG_IGN; // ignore the signal - see README ;)
     sa.sa_flags = SA_NOCLDWAIT;
 
     sigaction(SIGCHLD, &sa, NULL);
@@ -19,7 +21,7 @@ int main(int argc, char **argv) {
     while (1) {
         pid_t pid = fork();
         if (pid == 0) {
-            printf("here's looking at you kid: (%d)\n", pid);
+            printf("here's looking at you kid: (%d)\n", getpid());
             exit(EXIT_SUCCESS); // does the child process live on? (as a zombie?)
         }
         sleep(1);
