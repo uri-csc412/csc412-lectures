@@ -9,8 +9,8 @@ void save_us_joel() {
     // save us Joel from the zombies!
     struct sigaction sa;
     memset(&sa, 0, sizeof(sa));
-    // sa.sa_handler = SIG_DFL;
-    sa.sa_handler = SIG_IGN; // ignore the signal - see README ;)
+     sa.sa_handler = SIG_DFL;
+    // sa.sa_handler = SIG_IGN; // ignore the signal - see README ;)
     sa.sa_flags = SA_NOCLDWAIT;
 
     sigaction(SIGCHLD, &sa, NULL);
