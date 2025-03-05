@@ -14,11 +14,8 @@ int main() {
     std::string driver1 = "Lily";
     std::string driver2 = "Angel";
 
-    std::thread d1(driveMotorcycle, std::ref(driver1));
-    std::thread d2(driveMotorcycle, std::ref(driver2));
-
-    d1.join();
-    d2.join();
+    driveMotorcycle(driver1);
+    driveMotorcycle(driver2);
 
     return 0;
 }
