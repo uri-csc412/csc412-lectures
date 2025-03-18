@@ -4,6 +4,8 @@
 #include <sys/mman.h>
 #include <unistd.h>
 
+// if the code complains about missing main(void) 
+// double-check you are in the course dev environment
 int main() {
     // the physical address you want to write to
     unsigned long phys_addr = 0x12345678; // example address
