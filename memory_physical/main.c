@@ -6,10 +6,10 @@
 
 // if the code complains about missing main(void) 
 // double-check you are in the course dev environment
-int main() {
+int main(void) {
     // the physical address you want to write to
     unsigned long phys_addr = 0x12345678; // example address
-    unsigned long page_size = sysconf(_SC_PAGESIZE);
+    unsigned long page_size = sysconf(_SC_PAGESIZE); // we need to get the fixed page size!
     unsigned long mapped_size = page_size;
     unsigned long page_mask = (unsigned long)(long)(~(page_size - 1));
     unsigned long mapped_addr = phys_addr & page_mask;

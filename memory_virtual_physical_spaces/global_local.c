@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 // what is this address?
-int globalVar = 4;
+int globalVar = 6;
 
 int main() {
     // what is this address?
