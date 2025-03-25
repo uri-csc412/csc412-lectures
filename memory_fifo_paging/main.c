@@ -14,7 +14,7 @@ After processing each page, the state of the frames is displayed.
 
 int main() {
     // define the incoming stream of page references
-    int incomingStream[] = {4, 1, 2, 4, 5}; // holding the sequence of page references
+    int incomingStream[] = {4, 1, 2, 3, 5}; // holding the sequence of page references
     int pageFaults = 0;     // counter to track the # of page faults (when a page isn't found in the frames)
     int frames = 3;         // number of available frames in memory
     int m, n, s, pages;     // loop counters and temporary variables; tot # of page references in incomingStream
