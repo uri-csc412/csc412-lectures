@@ -1,1 +1,0 @@
-The UNIX philosophy: Build a prototype as soon as possible. Choose portability over efficiency. Store data in flat text files. Use software leverage to your advantage.
