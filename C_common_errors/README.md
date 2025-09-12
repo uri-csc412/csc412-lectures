@@ -1,5 +1,6 @@
 ## Overview
 
+
 See lecture slides for `Docker and OS Structures` for Common Errors in C:
 
 In this folder you will find the original `_err.c` error filled code and the solution code as `_sol.c`
