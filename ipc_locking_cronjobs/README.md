@@ -1,3 +1,5 @@
+# Lock Files!
+
 `#!/bin/bash`
 This line is called a shebang and specifies the interpreter that should be used to execute the script, which is /bin/bash in this case.
 
@@ -15,3 +17,13 @@ After displaying the message, the script exits with a status code of 1, which ty
 
 `echo $$ > "$L"` 
 If the lock file does not exist (indicating no other instance is running), this line creates the lock file (/var/run/my_cron_job.lock) and writes the process ID (PID) of the current instance of the script ($$) to it. This indicates that this instance of the script is currently running and holds the lock.
+
+
+# Diff Testing!
+
+See the `difftest.sh` for examples to compare the output of programs. This will really help with testing on A1.
+
+Bash has tons of little tools to compare the contents of files and outputs of programs. Here were are using `cmp` with the `-s` flag:
+```
+cmp -s
+```
