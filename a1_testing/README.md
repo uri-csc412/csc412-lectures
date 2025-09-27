@@ -12,8 +12,27 @@
 
 For A1 you could run:
 ```bash
-diff -c <(echo "bob lily alice" | ./sort.sh) <(echo "bob lily alice" | sort)
+diff -c <(printf "bob\nlily\nalice\n" | ./sort.sh) <(printf "bob\nlily\nalice\n" | sort)
 ```
+
+If you see this... it is good ;)
+```bash
+csc412-user@271a3c95e0af:~/assignments/a1_unix/solution2/programs$ diff -c <(printf "bob\nlily\nalice\n" | ./sort.sh) <(printf "bob\nlily\nalice\n" | sort)
+csc412-user@271a3c95e0af:~/assignments/a1_unix/solution2/programs$ 
+```
+
+That is actually the best case, woot: it means the output of your custom script sort.sh is identical to the output of the system’s sort command for the given input: 
+```
+bob
+lily
+alice
+```
+
+If there had been any differences, you would have seen a context diff with *** and --- headers plus the mismatched lines.
+
+How to interpret diff's outputs:
+* Empty diff output = no differences.
+* Non-empty diff output = mismatches shown.
 
 ## More About Comparing Program Outputs with `diff`
 
