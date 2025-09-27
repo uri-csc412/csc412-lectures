@@ -7,3 +7,17 @@
 ./diff_example.sh same1.sh same2.sh 
 
 ./diff_example.sh same1.sh different.sh
+
+
+## More About Comparing Program Outputs with `diff`
+
+The `diff` command is a Unix tool that highlights line-by-line differences between two files or outputs.  
+
+We are using the `diff` command to compare the results (stdout) of two programs. You can use this to verify whether two implementations produce the same output. Handy for catching those tiny little differences. ;)
+
+### Usage
+
+Run the script with two executables as arguments:
+
+```bash
+./compare.sh program1 program2.sh
