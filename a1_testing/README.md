@@ -4,10 +4,11 @@
 
 **Try running these:**
 
+```bash
 ./diff_example.sh same1.sh same2.sh 
 
 ./diff_example.sh same1.sh different.sh
-
+```
 
 ## More About Comparing Program Outputs with `diff`
 
@@ -20,4 +21,5 @@ We are using the `diff` command to compare the results (stdout) of two programs.
 Run the script with two executables as arguments:
 
 ```bash
-./compare.sh program1 program2.sh
+./diff_example.sh program1 program2.sh
+```
