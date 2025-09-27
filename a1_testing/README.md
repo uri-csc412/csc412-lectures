@@ -10,6 +10,11 @@
 ./diff_example.sh same1.sh different.sh
 ```
 
+For A1 you could run:
+```bash
+diff -c <(echo "bob lily alice" | ./sort.sh) <(echo "bob lily alice" | sort)
+```
+
 ## More About Comparing Program Outputs with `diff`
 
 The `diff` command is a Unix tool that highlights line-by-line differences between two files or outputs.  
