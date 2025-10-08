@@ -6,9 +6,11 @@ std::mutex motoMutex;
 
 void driveMotorcycle(const std::string& motoDriver) {
     std::unique_lock<std::mutex> motoLock(motoMutex);
+    // critical section
     std::cout << motoDriver << " is starting to drive the motorcycle\n";
     std::this_thread::sleep_for(std::chrono::seconds(2));
     std::cout << motoDriver << " is done driving the motorcycle\n";
+    //
     motoLock.unlock();
 }
 
