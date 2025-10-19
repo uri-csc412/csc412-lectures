@@ -12,9 +12,9 @@ void critical(const char * str) {
   size_t len = strlen(str);
   for (size_t i = 0; i < len; ++i) {
     printf("%c", str[i]);
-  } // for
+  }
   printf("\n");
-} // str
+}
 
 typedef atomic_flag mut_t;
 volatile mut_t mut = ATOMIC_FLAG_INIT; // false; true = locked; false = unlocked
@@ -30,10 +30,10 @@ void * pingpong(void * p) {
         acquire(&mut);
         critical(msg);
         release(&mut);
-    } // for 
+    }
 } // pingpong
 
-int main() {
+main(void) {
     setvbuf(stdout, NULL, _IONBF, 0);
     pthread_t ping;
     pthread_t pong;
@@ -41,4 +41,4 @@ int main() {
     pthread_create(&pong, NULL, pingpong, PONG);
     for(;;);
     return 0;
-} // main
+}
