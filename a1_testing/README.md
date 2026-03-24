@@ -47,3 +47,9 @@ Run the script with two executables as arguments:
 ```bash
 ./diff_example.sh program1 program2.sh
 ```
+
+Want to see the timing?
+
+```bash
+time ./different.sh
+```

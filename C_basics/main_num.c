@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 
 int main() {
     // numerical types
@@ -21,7 +22,7 @@ int main() {
     // floating-point types
     float l = 3.402823466e+38F;                     
     double m = 1.7976931348623158e+308;           
-    long double n = 1.18973149535723176502e+4932L;  
+    long double n = INFINITY; // on some systems this will work too ;) -> 1.18973149535723176502e+4932L;  
 
     printf("char: %c,\nsigned char: %d,\nunsigned char: %u\n\n", a, b, c);
     printf("short: %d,\nunsigned short: %u\n\n", d, e);
