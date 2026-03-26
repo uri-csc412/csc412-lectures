@@ -41,6 +41,7 @@ func main() {
 	// MAP STEP
 	mapped := mapFunc(input)
 
+	fmt.Println("hi mom")
 	fmt.Println("Mapped key-value pairs:")
 	for _, kv := range mapped {
 		fmt.Printf("{Key: %q, Value: %q}\n", kv.Key, kv.Value)

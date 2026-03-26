@@ -60,7 +60,7 @@ func main() {
 		}
 
 		if e, ok := err.(*os.PathError); ok && e.Err == syscall.ENOSPC {
-			//deleteTempFiles() // Recover some space.
+			//deleteTempFiles() // func we could create to recover some space
 			continue
 		}
 		return
